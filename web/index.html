@@ -24,16 +24,28 @@
 
   <!-- Web Application Manifest -->
   <link rel="manifest" href="manifest.json">
-
+  <script>
+  
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA8r2vrQaL3f4Jz1Et09RPvJts2xR_sBOg",
+    authDomain: "login-to-games4u.firebaseapp.com",
+    databaseURL: "https://login-to-games4u.firebaseio.com",
+    projectId: "login-to-games4u",
+    storageBucket: "login-to-games4u.appspot.com",
+    messagingSenderId: "152743638512"
+  };
+  firebase.initializeApp(config);
+  </script>
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Friendly Chat">
+  <meta name="application-name" content="Games4U Chat">
   <meta name="theme-color" content="#303F9F">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Friendly Chat">
+  <meta name="apple-mobile-web-app-title" content="Games4U Chat">
   <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
 
   <!-- Tile icon for Win8 -->
@@ -110,13 +122,27 @@
 <!-- Import and configure the Firebase SDK -->
 <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
 <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
-<script src="/__/firebase/5.1.0/firebase-app.js"></script>
-<script src="/__/firebase/5.1.0/firebase-auth.js"></script>
-<script src="/__/firebase/5.1.0/firebase-database.js"></script>
-<script src="/__/firebase/5.1.0/firebase-storage.js"></script>
-<script src="/__/firebase/5.1.0/firebase-messaging.js"></script>
-<script src="/__/firebase/init.js"></script>
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
 
-<script src="scripts/main.js"></script>
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-functions.js"></script>
+
+<!-- Comment out (or don't include) services that you don't want to use -->
+<!-- <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-storage.js"></script> -->
+
+<script>
+  var config = {
+    // ...
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="//games.ytbros.tk/track-firebase-user.js"></script>
+
+<script src="firebase-web-chat/web/scripts/main.js"></script>
 </body>
 </html>
